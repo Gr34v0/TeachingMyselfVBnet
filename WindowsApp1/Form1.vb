@@ -15,4 +15,7 @@
         targetOfBtn.Text = btn3Click.Text
     End Sub
 
+    Private Sub btnCSView_Click(sender As Object, e As EventArgs) Handles btnCSViewClick.Click
+        CSV_Manipulation.ReadFile()
+    End Sub
 End Class

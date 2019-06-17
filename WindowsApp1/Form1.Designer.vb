@@ -26,6 +26,7 @@ Partial Class Form1
         Me.btn2Click = New System.Windows.Forms.Button()
         Me.btn3Click = New System.Windows.Forms.Button()
         Me.targetOfBtn = New System.Windows.Forms.Label()
+        Me.btnCSViewClick = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn1Click
@@ -64,11 +65,21 @@ Partial Class Form1
         Me.targetOfBtn.TabIndex = 3
         Me.targetOfBtn.Text = "Label1"
         '
+        'btnCSViewClick
+        '
+        Me.btnCSViewClick.Location = New System.Drawing.Point(590, 50)
+        Me.btnCSViewClick.Name = "btnCSViewClick"
+        Me.btnCSViewClick.Size = New System.Drawing.Size(137, 54)
+        Me.btnCSViewClick.TabIndex = 4
+        Me.btnCSViewClick.Text = "View CSV"
+        Me.btnCSViewClick.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 323)
+        Me.Controls.Add(Me.btnCSViewClick)
         Me.Controls.Add(Me.targetOfBtn)
         Me.Controls.Add(Me.btn3Click)
         Me.Controls.Add(Me.btn2Click)
@@ -84,4 +95,5 @@ Partial Class Form1
     Friend WithEvents btn2Click As Button
     Friend WithEvents btn3Click As Button
     Friend WithEvents targetOfBtn As Label
+    Friend WithEvents btnCSViewClick As Button
 End Class
