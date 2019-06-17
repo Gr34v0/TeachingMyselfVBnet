@@ -30,6 +30,7 @@ Partial Class Form1
         Me.btnRange = New System.Windows.Forms.Button()
         Me.btnMedian = New System.Windows.Forms.Button()
         Me.btnMean = New System.Windows.Forms.Button()
+        Me.btnSort = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn1Click
@@ -70,7 +71,7 @@ Partial Class Form1
         '
         'btnCSViewClick
         '
-        Me.btnCSViewClick.Location = New System.Drawing.Point(326, 191)
+        Me.btnCSViewClick.Location = New System.Drawing.Point(41, 191)
         Me.btnCSViewClick.Name = "btnCSViewClick"
         Me.btnCSViewClick.Size = New System.Drawing.Size(137, 54)
         Me.btnCSViewClick.TabIndex = 4
@@ -104,11 +105,21 @@ Partial Class Form1
         Me.btnMean.Text = "Mean"
         Me.btnMean.UseVisualStyleBackColor = True
         '
+        'btnSort
+        '
+        Me.btnSort.Location = New System.Drawing.Point(326, 191)
+        Me.btnSort.Name = "btnSort"
+        Me.btnSort.Size = New System.Drawing.Size(137, 54)
+        Me.btnSort.TabIndex = 8
+        Me.btnSort.Text = "Sort"
+        Me.btnSort.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 475)
+        Me.Controls.Add(Me.btnSort)
         Me.Controls.Add(Me.btnMean)
         Me.Controls.Add(Me.btnMedian)
         Me.Controls.Add(Me.btnRange)
@@ -131,4 +142,5 @@ Partial Class Form1
     Friend WithEvents btnRange As Button
     Friend WithEvents btnMedian As Button
     Friend WithEvents btnMean As Button
+    Friend WithEvents btnSort As Button
 End Class

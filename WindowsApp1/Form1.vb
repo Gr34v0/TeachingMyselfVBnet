@@ -13,19 +13,43 @@
     End Sub
 
     Private Sub btnCSView_Click(sender As Object, e As EventArgs) Handles btnCSViewClick.Click
-        targetOfBtn.Text = CSV_Manipulation.ReadFile()
+        Try
+            targetOfBtn.Text = CSV_Manipulation.ReadFile()
+        Catch ex As Exception
+            MsgBox("/'data.csv/' does not exist.")
+        End Try
     End Sub
 
     Private Sub btnMean_Click(sender As Object, e As EventArgs) Handles btnMean.Click
-
+        Try
+            targetOfBtn.Text = CustomMath.CalcMean(CSVToIntList(targetOfBtn.Text))
+        Catch ex As Exception
+            Exit Sub
+        End Try
     End Sub
 
     Private Sub btnMedian_Click(sender As Object, e As EventArgs) Handles btnMedian.Click
-
+        Try
+            targetOfBtn.Text = CustomMath.CalcMedian(CSVToIntList(targetOfBtn.Text))
+        Catch ex As Exception
+            Exit Sub
+        End Try
     End Sub
 
     Private Sub btnRange_Click(sender As Object, e As EventArgs) Handles btnRange.Click
-        targetOfBtn.Text = CustomMath.CalcRange(CSVToIntList(targetOfBtn.Text))
+        Try
+            targetOfBtn.Text = CustomMath.CalcRange(CSVToIntList(targetOfBtn.Text))
+        Catch ex As Exception
+            Exit Sub
+        End Try
+    End Sub
+
+    Private Sub btnSort_Click(sender As Object, e As EventArgs) Handles btnSort.Click
+        Try
+            targetOfBtn.Text = IntListToCSV(CSVToIntList(targetOfBtn.Text).Sort())
+        Catch ex As Exception
+            Exit Sub
+        End Try
     End Sub
 
 End Class

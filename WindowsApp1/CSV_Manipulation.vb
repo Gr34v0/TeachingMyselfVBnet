@@ -9,7 +9,12 @@
     Function CSVToIntList(numbers As String)
         Dim numberList As ArrayList = New ArrayList()
         For Each number As String In numbers.Split(",")
-            numberList.Add(Convert.ToInt32(number))
+            Try
+                numberList.Add(Convert.ToInt32(number))
+            Catch ex As Exception
+                MsgBox("TEXT IS NOT ONE OR MORE INTEGER(S).")
+                Exit For
+            End Try
         Next
         Return numberList
     End Function
