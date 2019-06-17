@@ -29,7 +29,7 @@ Partial Class Form1
         Me.btnCSViewClick = New System.Windows.Forms.Button()
         Me.btnRange = New System.Windows.Forms.Button()
         Me.btnMedian = New System.Windows.Forms.Button()
-        Me.btnMode = New System.Windows.Forms.Button()
+        Me.btnMean = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn1Click
@@ -66,7 +66,6 @@ Partial Class Form1
         Me.targetOfBtn.Name = "targetOfBtn"
         Me.targetOfBtn.Size = New System.Drawing.Size(707, 13)
         Me.targetOfBtn.TabIndex = 3
-        Me.targetOfBtn.Text = "Label1"
         Me.targetOfBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCSViewClick
@@ -96,21 +95,21 @@ Partial Class Form1
         Me.btnMedian.Text = "Median"
         Me.btnMedian.UseVisualStyleBackColor = True
         '
-        'btnMode
+        'btnMean
         '
-        Me.btnMode.Location = New System.Drawing.Point(38, 298)
-        Me.btnMode.Name = "btnMode"
-        Me.btnMode.Size = New System.Drawing.Size(137, 54)
-        Me.btnMode.TabIndex = 7
-        Me.btnMode.Text = "Mode"
-        Me.btnMode.UseVisualStyleBackColor = True
+        Me.btnMean.Location = New System.Drawing.Point(38, 298)
+        Me.btnMean.Name = "btnMean"
+        Me.btnMean.Size = New System.Drawing.Size(137, 54)
+        Me.btnMean.TabIndex = 7
+        Me.btnMean.Text = "Mean"
+        Me.btnMean.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 475)
-        Me.Controls.Add(Me.btnMode)
+        Me.Controls.Add(Me.btnMean)
         Me.Controls.Add(Me.btnMedian)
         Me.Controls.Add(Me.btnRange)
         Me.Controls.Add(Me.btnCSViewClick)
@@ -131,5 +130,5 @@ Partial Class Form1
     Friend WithEvents btnCSViewClick As Button
     Friend WithEvents btnRange As Button
     Friend WithEvents btnMedian As Button
-    Friend WithEvents btnMode As Button
+    Friend WithEvents btnMean As Button
 End Class

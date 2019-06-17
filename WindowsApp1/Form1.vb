@@ -13,14 +13,10 @@
     End Sub
 
     Private Sub btnCSView_Click(sender As Object, e As EventArgs) Handles btnCSViewClick.Click
-        Dim allNumbs As String = ""
-        For Each number As Integer In CSV_Manipulation.SortNumbs(CSV_Manipulation.ReadFile())
-            allNumbs += (number.ToString + ", ")
-        Next
-        targetOfBtn.Text = allNumbs
+        targetOfBtn.Text = CSV_Manipulation.ReadFile()
     End Sub
 
-    Private Sub btnMode_Click(sender As Object, e As EventArgs) Handles btnMode.Click
+    Private Sub btnMean_Click(sender As Object, e As EventArgs) Handles btnMean.Click
 
     End Sub
 
@@ -29,7 +25,7 @@
     End Sub
 
     Private Sub btnRange_Click(sender As Object, e As EventArgs) Handles btnRange.Click
-
+        targetOfBtn.Text = CustomMath.CalcRange(CSVToIntList(targetOfBtn.Text))
     End Sub
 
 End Class
