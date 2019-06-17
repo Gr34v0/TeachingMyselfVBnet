@@ -1,7 +1,4 @@
 ﻿Public Class Form1
-    'Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
-    'End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1Click.Click
         targetOfBtn.Text = btn1Click.Text
@@ -16,6 +13,23 @@
     End Sub
 
     Private Sub btnCSView_Click(sender As Object, e As EventArgs) Handles btnCSViewClick.Click
-        CSV_Manipulation.ReadFile()
+        Dim allNumbs As String = ""
+        For Each number As Integer In CSV_Manipulation.SortNumbs(CSV_Manipulation.ReadFile())
+            allNumbs += (number.ToString + ", ")
+        Next
+        targetOfBtn.Text = allNumbs
     End Sub
+
+    Private Sub btnMode_Click(sender As Object, e As EventArgs) Handles btnMode.Click
+
+    End Sub
+
+    Private Sub btnMedian_Click(sender As Object, e As EventArgs) Handles btnMedian.Click
+
+    End Sub
+
+    Private Sub btnRange_Click(sender As Object, e As EventArgs) Handles btnRange.Click
+
+    End Sub
+
 End Class

@@ -27,11 +27,14 @@ Partial Class Form1
         Me.btn3Click = New System.Windows.Forms.Button()
         Me.targetOfBtn = New System.Windows.Forms.Label()
         Me.btnCSViewClick = New System.Windows.Forms.Button()
+        Me.btnRange = New System.Windows.Forms.Button()
+        Me.btnMedian = New System.Windows.Forms.Button()
+        Me.btnMode = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn1Click
         '
-        Me.btn1Click.Location = New System.Drawing.Point(38, 204)
+        Me.btn1Click.Location = New System.Drawing.Point(38, 409)
         Me.btn1Click.Name = "btn1Click"
         Me.btn1Click.Size = New System.Drawing.Size(137, 54)
         Me.btn1Click.TabIndex = 0
@@ -40,7 +43,7 @@ Partial Class Form1
         '
         'btn2Click
         '
-        Me.btn2Click.Location = New System.Drawing.Point(322, 204)
+        Me.btn2Click.Location = New System.Drawing.Point(326, 409)
         Me.btn2Click.Name = "btn2Click"
         Me.btn2Click.Size = New System.Drawing.Size(137, 54)
         Me.btn2Click.TabIndex = 1
@@ -49,7 +52,7 @@ Partial Class Form1
         '
         'btn3Click
         '
-        Me.btn3Click.Location = New System.Drawing.Point(608, 204)
+        Me.btn3Click.Location = New System.Drawing.Point(608, 409)
         Me.btn3Click.Name = "btn3Click"
         Me.btn3Click.Size = New System.Drawing.Size(137, 54)
         Me.btn3Click.TabIndex = 2
@@ -58,27 +61,58 @@ Partial Class Form1
         '
         'targetOfBtn
         '
-        Me.targetOfBtn.AutoSize = True
-        Me.targetOfBtn.Location = New System.Drawing.Point(360, 132)
+        Me.targetOfBtn.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.targetOfBtn.Location = New System.Drawing.Point(38, 132)
         Me.targetOfBtn.Name = "targetOfBtn"
-        Me.targetOfBtn.Size = New System.Drawing.Size(39, 13)
+        Me.targetOfBtn.Size = New System.Drawing.Size(707, 13)
         Me.targetOfBtn.TabIndex = 3
         Me.targetOfBtn.Text = "Label1"
+        Me.targetOfBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCSViewClick
         '
-        Me.btnCSViewClick.Location = New System.Drawing.Point(590, 50)
+        Me.btnCSViewClick.Location = New System.Drawing.Point(326, 191)
         Me.btnCSViewClick.Name = "btnCSViewClick"
         Me.btnCSViewClick.Size = New System.Drawing.Size(137, 54)
         Me.btnCSViewClick.TabIndex = 4
         Me.btnCSViewClick.Text = "View CSV"
         Me.btnCSViewClick.UseVisualStyleBackColor = True
         '
+        'btnRange
+        '
+        Me.btnRange.Location = New System.Drawing.Point(608, 298)
+        Me.btnRange.Name = "btnRange"
+        Me.btnRange.Size = New System.Drawing.Size(137, 54)
+        Me.btnRange.TabIndex = 5
+        Me.btnRange.Text = "Range"
+        Me.btnRange.UseVisualStyleBackColor = True
+        '
+        'btnMedian
+        '
+        Me.btnMedian.Location = New System.Drawing.Point(326, 298)
+        Me.btnMedian.Name = "btnMedian"
+        Me.btnMedian.Size = New System.Drawing.Size(137, 54)
+        Me.btnMedian.TabIndex = 6
+        Me.btnMedian.Text = "Median"
+        Me.btnMedian.UseVisualStyleBackColor = True
+        '
+        'btnMode
+        '
+        Me.btnMode.Location = New System.Drawing.Point(38, 298)
+        Me.btnMode.Name = "btnMode"
+        Me.btnMode.Size = New System.Drawing.Size(137, 54)
+        Me.btnMode.TabIndex = 7
+        Me.btnMode.Text = "Mode"
+        Me.btnMode.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 323)
+        Me.ClientSize = New System.Drawing.Size(800, 475)
+        Me.Controls.Add(Me.btnMode)
+        Me.Controls.Add(Me.btnMedian)
+        Me.Controls.Add(Me.btnRange)
         Me.Controls.Add(Me.btnCSViewClick)
         Me.Controls.Add(Me.targetOfBtn)
         Me.Controls.Add(Me.btn3Click)
@@ -87,7 +121,6 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -96,4 +129,7 @@ Partial Class Form1
     Friend WithEvents btn3Click As Button
     Friend WithEvents targetOfBtn As Label
     Friend WithEvents btnCSViewClick As Button
+    Friend WithEvents btnRange As Button
+    Friend WithEvents btnMedian As Button
+    Friend WithEvents btnMode As Button
 End Class
