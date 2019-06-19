@@ -49,7 +49,9 @@
 
     Private Sub btnSort_Click(sender As Object, e As EventArgs) Handles btnSort.Click
         Try
-            Dim test As String = IntListToCSV(CustomMath.SortNumbs(CSVToIntList(targetOfBtn.Text)))
+            Dim tmpList As ArrayList = CSVToIntList(targetOfBtn.Text)
+            tmpList.Sort()
+            Dim test As String = IntListToCSV(tmpList)
             targetOfBtn.Text = test
         Catch ex As Exception
             MsgBox(ex.Message)

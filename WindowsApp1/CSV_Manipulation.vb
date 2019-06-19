@@ -21,7 +21,7 @@
 
     Function IntListToCSV(intList As ArrayList)
         Dim allNumbs As String = ""
-        For Each number As Integer In CSV_Manipulation.CSVToIntList(CSV_Manipulation.ReadFile())
+        For Each number As Integer In intList
             allNumbs += number.ToString + ", "
         Next number
         Return allNumbs

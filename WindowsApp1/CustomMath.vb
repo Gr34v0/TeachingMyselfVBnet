@@ -12,6 +12,7 @@
         Return mean
     End Function
 
+
     Function CalcMedian(numbList As ArrayList)
         numbList.Sort()
         Dim targetNumb = numbList.Count / 2
@@ -40,7 +41,7 @@
         Return range
     End Function
 
-    Function SortNumbs(numbList As ArrayList)
+    Function SortNumbsFunc(numbList As ArrayList)
         Dim sortedList As ArrayList = New ArrayList()
         numbList.Sort()
         For Each number In numbList
@@ -48,6 +49,10 @@
         Next number
         Return sortedList
     End Function
+
+    Sub SortNumbs(numbList As ArrayList)
+        numbList.Sort()
+    End Sub
 
 
 End Module
