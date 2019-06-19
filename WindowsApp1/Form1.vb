@@ -16,7 +16,7 @@
         Try
             targetOfBtn.Text = CSV_Manipulation.ReadFile()
         Catch ex As Exception
-            MsgBox("/'data.csv/' does not exist.")
+            MsgBox(ex.Message + "--  /'data.csv/' does not exist.")
         End Try
     End Sub
 
@@ -24,6 +24,7 @@
         Try
             targetOfBtn.Text = CustomMath.CalcMean(CSVToIntList(targetOfBtn.Text))
         Catch ex As Exception
+            MsgBox(ex.Message)
             Exit Sub
         End Try
     End Sub
@@ -32,6 +33,7 @@
         Try
             targetOfBtn.Text = CustomMath.CalcMedian(CSVToIntList(targetOfBtn.Text))
         Catch ex As Exception
+            MsgBox(ex.Message)
             Exit Sub
         End Try
     End Sub
@@ -40,14 +42,17 @@
         Try
             targetOfBtn.Text = CustomMath.CalcRange(CSVToIntList(targetOfBtn.Text))
         Catch ex As Exception
+            MsgBox(ex.Message)
             Exit Sub
         End Try
     End Sub
 
     Private Sub btnSort_Click(sender As Object, e As EventArgs) Handles btnSort.Click
         Try
-            targetOfBtn.Text = IntListToCSV(CSVToIntList(targetOfBtn.Text).Sort())
+            Dim test As String = IntListToCSV(CustomMath.SortNumbs(CSVToIntList(targetOfBtn.Text)))
+            targetOfBtn.Text = test
         Catch ex As Exception
+            MsgBox(ex.Message)
             Exit Sub
         End Try
     End Sub

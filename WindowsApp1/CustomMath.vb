@@ -5,13 +5,12 @@
         Dim totalNumb As Integer
         For Each number As Integer In numbList
             totalNumb += number
-        Next
+        Next number
 
         Dim mean = totalNumb / numbList.Count
 
         Return mean
     End Function
-
 
     Function CalcMedian(numbList As ArrayList)
         numbList.Sort()
@@ -39,6 +38,15 @@
         Dim range As Integer = lastNumb - firstNumb
 
         Return range
+    End Function
+
+    Function SortNumbs(numbList As ArrayList)
+        Dim sortedList As ArrayList = New ArrayList()
+        numbList.Sort()
+        For Each number In numbList
+            sortedList.Add(number)
+        Next number
+        Return sortedList
     End Function
 
 

@@ -15,15 +15,15 @@
                 MsgBox("TEXT IS NOT ONE OR MORE INTEGER(S).")
                 Exit For
             End Try
-        Next
+        Next number
         Return numberList
     End Function
 
     Function IntListToCSV(intList As ArrayList)
         Dim allNumbs As String = ""
         For Each number As Integer In CSV_Manipulation.CSVToIntList(CSV_Manipulation.ReadFile())
-            allNumbs += (number.ToString + ", ")
-        Next
+            allNumbs += number.ToString + ", "
+        Next number
         Return allNumbs
     End Function
 
